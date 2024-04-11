@@ -17,9 +17,6 @@ class Link < ApplicationRecord
   end
 
   def domain
-    URI(url).host rescue StandardError URI::InvalidURIError
-
-    # If doesn't find, return nil, nothing
-  
+    URI(url).host rescue StandardError URI::InvalidURIError unless url.nil?
   end
 end
