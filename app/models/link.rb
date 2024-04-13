@@ -6,6 +6,10 @@ class Link < ApplicationRecord
 
   validates :url, presence: true
 
+  after_save_commit if: :url_previously_changed? do
+    MetadataJob.perform_later(to_param)
+  end
+
   # This overrides the usual id
   def to_param
     ShortCode.encode(id)
