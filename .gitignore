@@ -40,3 +40,6 @@
 # Ignore bin/rails and bin/rake, to keep "ruby" in git, not "ruby.exe"
 bin/rails
 bin/rake
+/bin/rails
+/bin/rake
+/bin/
