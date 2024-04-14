@@ -1,6 +1,6 @@
 require "test_helper"
 
-class UserTest < ActionDispatch::IntegrationTest
+class UsersTest < ActionDispatch::IntegrationTest
   test "user can log in" do
     sign_in users(:one)
     get links_path
