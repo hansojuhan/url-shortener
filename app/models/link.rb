@@ -25,4 +25,11 @@ class Link < ApplicationRecord
   def domain
     URI(url).host rescue StandardError URI::InvalidURIError unless url.nil?
   end
+
+  # Links are not editable if there is no user ID
+  # Returns false if no user_id on Link
+  # Returns true or false if user.id matches user_id on Link
+  def editable_by?(user)
+    user_id? && (user_id == user&.id)
+  end
 end
