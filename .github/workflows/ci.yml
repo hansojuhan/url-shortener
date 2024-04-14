@@ -30,7 +30,7 @@ jobs:
         env:
           DATABASE_URL: postgres://postgres:password@localhost:5432/test
           RAILS_ENV: test
-        run:
+        run: |
           bin/rails test:prepare
           bin/rails db:test:prepare
           "bin/rails test"
