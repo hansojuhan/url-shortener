@@ -19,7 +19,8 @@ class Link < ApplicationRecord
   # Overrides the regular find used by Rails
   # If find is used with Link model, now uses this
   def self.find(id)
-    super ShortCode.decode(id)
+    # super ShortCode.decode(id)
+    super (id.is_a?(Integer) ? id : ShortCode.decode(id))
   end
 
   def domain
