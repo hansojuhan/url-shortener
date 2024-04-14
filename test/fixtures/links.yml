@@ -2,16 +2,26 @@
 
 one:
   id: 1
-  url: MyString
-  title: MyString
-  description: MyString
-  image: MyString
+  url: https://google.com
+  title: Google
+  description: Google search
+  image: 
   views_count: 1
+  user: one
 
 two:
   id: 2
-  url: MyString
-  title: MyString
-  description: MyString
-  image: MyString
+  url: https://facebook.com
+  title: Facebook
+  description: Connect with friends
+  image: 
   views_count: 1
+  user: two
+
+anonymous:
+  id: 3
+  url: https://twitter.com
+  title: Twitter
+  description: Tweet
+  image: 
+  views_count: 0
