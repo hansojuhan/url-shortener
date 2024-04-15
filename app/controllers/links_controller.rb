@@ -3,10 +3,13 @@ class LinksController < ApplicationController
   before_action :check_if_editable, only: [:edit, :update, :destroy]
 
   def index
-    @links = Link.recent_first
+    @pagy, @links = pagy Link.recent_first
 
     # If link already defined, let's skip it
     @link ||= Link.new
+    
+  rescue Pagy::OverflowError
+    redirect_to root_path
   end
 
   def create
