@@ -1,24 +1,13 @@
-# README
+# URL Shortener
+A demo Rails URL Shortener app. Shortening is based on creating a short url with Base62 encryption of the URL index.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Features:
+- Base62 encoding and decoding algorithm
+- Fetching and saving metadata for websites (icon, title, description)
+- Rails background job
+- Updating pages with turbo stream
+- Copy to clipboard with clibboardJS
+- Users and read/delete/edit permissions with Devise
+- Integration and model tests
+- Github actions for running tests for each push
+- Pagination with pagy (buggy)
