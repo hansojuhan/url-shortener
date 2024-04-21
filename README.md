@@ -9,5 +9,5 @@ Features:
 - Copy to clipboard with clibboardJS
 - Users and read/delete/edit permissions with Devise
 - Integration and model tests
-- Github actions for running tests for each push
+- CI with Github Actions for running tests for each push
 - Pagination with pagy (buggy)
